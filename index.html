@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benim Dünyam</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: #eef2ff;
+      line-height: 1.6;
+    }
+
+    header, main, footer {
+      max-width: 1000px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    a { color: #a5b4fc; }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a { text-decoration: none; }
+
+    .giris { padding: 70px 0; }
+
+    .etiket {
+      color: #67e8f9;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1.15;
+      margin: 20px 0;
+    }
+
+    h1 span { color: #a5b4fc; }
+
+    p { color: #bac5d8; }
+
+    button {
+      background: #a5b4fc;
+      color: #101827;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover { background: #c7d2fe; }
+
+    button:focus-visible, a:focus-visible {
+      outline: 3px solid #67e8f9;
+      outline-offset: 5px;
+    }
+
+    .kartlar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .kart {
+      background: #1b263b;
+      padding: 24px;
+      border: 1px solid #334155;
+      border-radius: 18px;
+    }
+
+    .kart h3 { margin-top: 0; }
+
+    section { margin-bottom: 48px; }
+
+    #mesaj { min-height: 26px; }
+
+    footer {
+      text-align: center;
+      color: #bac5d8;
+      border-top: 1px solid #334155;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <strong>✦ Benim Dünyam</strong>
+    <nav aria-label="Ana menü">
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#minicv">Mini CV</a>
+      <a href="#projeler">Projelerim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="giris">
+      <div class="etiket">MERHABA, SİTEME HOŞ GELDİN!</div>
+      <h1>Merhaba, ben<br><span>Umut Gültekin.</span></h1>
+      <p>
+        Web sitesi yapmayı öğreniyorum.
+        Burası öğrendiklerimi ve yaptığım projeleri paylaşacağım yer.
+      </p>
+      <button type="button" id="selam">Bir selam bırak 👋</button>
+      <p id="mesaj" aria-live="polite"></p>
+    </section>
+
+    <section id="hakkimda">
+      <h2>Hakkımda</h2>
+      <p>
+        Merhaba, ben Umut Gültekin. Meslek lisesinde okuyorum.
+        Teknolojiye meraklıyım; yeni fikirler ve küçük projeler
+        üretmeyi seviyorum. Kendimi her gün geliştirmeye çalışıyorum.
+      </p>
+
+      <div class="kartlar">
+        <article class="kart">
+          <h3>🎓 Eğitimim</h3>
+          <p>
+            Meslek lisesi öğrencisiyim. Yeni beceriler öğrenerek
+            kendimi geliştiriyorum.
+          </p>
+        </article>
+
+        <article class="kart">
+          <h3>💻 İlgi alanlarım</h3>
+          <p>
+            Teknoloji, web projeleri ve dijital fikirler üretmek.
+          </p>
+        </article>
+
+        <article class="kart">
+          <h3>🚀 Hedefim</h3>
+          <p>
+            Öğrendiklerimi projelere dönüştürmek ve üretmeye
+            devam etmek.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="minicv">
+      <h2>Mini CV</h2>
+
+      <div class="kartlar">
+        <article class="kart">
+          <h3>🎓 Eğitim</h3>
+          <p><strong>Meslek lisesi</strong></p>
+          <p>
+            Teknolojiye ilgi duyan ve kendini geliştirerek
+            üreten bir öğrenciyim.
+          </p>
+        </article>
+
+        <article class="kart">
+          <h3>💻 Odak</h3>
+          <p><strong>Teknoloji ve üretim</strong></p>
+          <p>
+            Web projeleri, dijital fikirler ve yeni beceriler
+            öğrenmek üzerine çalışıyorum.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projeler">
+      <h2>Projelerim</h2>
+      <div class="kartlar">
+        <article class="kart">
+          <h3>🌐 İlk web sitem</h3>
+          <p>HTML, CSS ve JavaScript ile hazırladığım bu sayfa.</p>
+        </article>
+
+        <article class="kart">
+          <h3>🎮 Bir oyun fikri</h3>
+          <p>İleride küçük bir tarayıcı oyunu yapmak istiyorum.</p>
+        </article>
+
+        <article class="kart">
+          <h3>🚀 Sıradaki adım</h3>
+          <p>Yeni bilgiler öğrenip sitemi geliştirmeye devam edeceğim.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>Öğrenerek ve deneyerek yaptım ✨</footer>
+
+ <script>
+  const buton = document.getElementById("selam");
+  const mesaj = document.getElementById("mesaj");
+
+  if (localStorage.getItem("selamVerildi") === "evet") {
+    buton.disabled = true;
+    buton.textContent = "Selamını bıraktın ✓";
+    mesaj.textContent = "Ziyaretin için teşekkürler! 👋";
+  }
+
+  buton.addEventListener("click", function () {
+    localStorage.setItem("selamVerildi", "evet");
+
+    buton.disabled = true;
+    buton.textContent = "Selamını bıraktın ✓";
+    mesaj.textContent = "Selamın geldi, teşekkürler! 👋";
+  });
+</script>
+</body>
+</html
